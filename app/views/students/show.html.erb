@@ -1,0 +1,7 @@
+<h2>Name: <%= @student.name %></h2>
+
+<ul id="courses-<%= @student.id %>">
+  <% @student.courses.each do |course| %>
+    <li><%= course.name %> - <%= @student.grade(course.id) %></li>
+  <% end %>
+</ul>

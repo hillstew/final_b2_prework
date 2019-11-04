@@ -1,0 +1,9 @@
+<h1>Course - <%= @course.name %></h1>
+
+<ul>
+  <% @course.sorted_grades.each_with_index do |course_student, index| %>
+    <li id="students-<%= index %>">
+      <%= course_student.name %> - <%= course_student.grade %>
+    </li>
+  <% end %>
+</ul>
